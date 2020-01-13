@@ -1,0 +1,22 @@
+{
+  "name": "githubactionssample",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/hofzzy/GitHubActionsSample.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hofzzy/GitHubActionsSample/issues"
+  },
+  "homepage": "https://github.com/hofzzy/GitHubActionsSample#readme",
+  "dependencies": {
+    "firebase-tools": "^7.11.0"
+  }
+}

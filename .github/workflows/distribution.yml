@@ -8,20 +8,35 @@ jobs:
     steps:
     - uses: actions/checkout@v1
 
+    - name: Set up Ruby 2.6.x
+      uses: actions/setup-ruby@v1
+      with:
+        ruby-version: '2.6.x'
+
+    - uses: actions/cache@v1
+      with:
+        path: vendor/bundle
+        key: ${{ runner.os }}-gem-${{ hashFiles('**/Gemfile.lock') }}
+        restore-keys: |
+          ${{ runner.os }}-gem-
+
+    - name: bundle install
+      run: |
+        gem install bundler:2.0.2
+        bundle install --path vendor/bundle
+
     - uses: actions/cache@v1
       with:
         path: Pods
         key: ${{ runner.os }}-pods-${{ hashFiles('**/Podfile.lock') }}
         restore-keys: |
           ${{ runner.os }}-pods-
-    - name: pod install
-      run: pod install
+
+    - name: bundle exec pod install
+      run: bundle exec pod install
 
     - name: Select Xcode version
       run: sudo xcode-select -s '/Applications/Xcode_11.2.app/Contents/Developer'
 
-    - name: Build
-      run: |
-        xcodebuild -sdk iphonesimulator \
-        -workspace GitHubActionsSample.xcworkspace -scheme GitHubActionsSample \
-        -configuration Debug build
+    - name: fastlane
+      run: bundle exec fastlane custom_lane
