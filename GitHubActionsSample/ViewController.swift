@@ -13,6 +13,11 @@ class ViewController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
+    let bob = Student(name: "bob")
     print("🍣 \(GitHubActionsSampleKeys().hogeKey)")
   }
+}
+
+struct Student {
+  var name: String
 }

@@ -20,4 +20,9 @@ class GitHubActionsSampleTests: XCTestCase {
   func testExample() {
     XCTAssertEqual(0, 0)
   }
+  
+  func testStudentName() {
+    let bob = Student(name: "bob")
+    XCTAssertEqual(bob.name, "bob")
+  }
 }
