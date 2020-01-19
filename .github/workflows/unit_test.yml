@@ -26,7 +26,7 @@ jobs:
         bundle install --path vendor/bundle
 
     - name: Set up cocoapods-keys
-      run: bundle exec pod keys set HogeKey "hoge"
+      run: bundle exec pod keys set HogeKey "hoge" GitHubActionsSample
 
     - uses: actions/cache@v1
       with:
