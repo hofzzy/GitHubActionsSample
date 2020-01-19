@@ -1,6 +1,10 @@
 name: distribution
 
-on: [push]
+# on: [push]
+on:
+  push:
+    branches:
+      -master
 
 jobs:
   bootstrap:
