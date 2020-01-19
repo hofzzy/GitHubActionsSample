@@ -24,17 +24,17 @@ platform :ios do
       device: 'iPhone 11'
     )
 
-    gym(
-      workspace: 'GitHubActionsSample.xcworkspace',
-      scheme: 'GitHubActionsSample',
-      export_method: 'ad-hoc'
-    )
+    # gym(
+    #   workspace: 'GitHubActionsSample.xcworkspace',
+    #   scheme: 'GitHubActionsSample',
+    #   export_method: 'ad-hoc'
+    # )
 
-    firebase_app_distribution(
-      app: '1:544602332843:ios:99bfaf767d781b67f821ee',
-      groups: 'sample_group',
-      release_notes: 'by fastlane',
-      firebase_cli_path: 'node_modules/.bin/firebase'
-    )
+    # firebase_app_distribution(
+    #   app: '1:544602332843:ios:99bfaf767d781b67f821ee',
+    #   groups: 'sample_group',
+    #   release_notes: 'by fastlane',
+    #   firebase_cli_path: 'node_modules/.bin/firebase'
+    # )
   end
 end
