@@ -16,5 +16,9 @@ target 'GitHubActionsSample' do
   target 'GitHubActionsSampleUITests' do
     # Pods for testing
   end
-
 end
+
+plugin 'cocoapods-keys', {
+  :project => "GitHubActionsSample",
+  :keys => ["HogeKey"]
+}

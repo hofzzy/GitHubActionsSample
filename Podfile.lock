@@ -59,6 +59,7 @@ PODS:
     - GoogleUtilities/Logger
   - GoogleUtilities/UserDefaults (6.3.2):
     - GoogleUtilities/Logger
+  - Keys (1.0.1)
   - nanopb (0.3.9011):
     - nanopb/decode (= 0.3.9011)
     - nanopb/encode (= 0.3.9011)
@@ -67,6 +68,7 @@ PODS:
 
 DEPENDENCIES:
   - Firebase/Analytics
+  - Keys (from `Pods/CocoaPodsKeys`)
 
 SPEC REPOS:
   trunk:
@@ -82,6 +84,10 @@ SPEC REPOS:
     - GoogleUtilities
     - nanopb
 
+EXTERNAL SOURCES:
+  Keys:
+    :path: Pods/CocoaPodsKeys
+
 SPEC CHECKSUMS:
   Firebase: 458d109512200d1aca2e1b9b6cf7d68a869a4a46
   FirebaseAnalytics: 45f36d9c429fc91d206283900ab75390cd05ee8a
@@ -93,8 +99,9 @@ SPEC CHECKSUMS:
   GoogleDataTransport: 8e9b210c97d55fbff306cc5468ff91b9cb32dcf5
   GoogleDataTransportCCTSupport: ef79a4728b864946a8aafdbab770d5294faf3b5f
   GoogleUtilities: 547a86735c6f0ee30ad17e94df4fc21f616b71cb
+  Keys: a576f4c9c1c641ca913a959a9c62ed3f215a8de9
   nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
 
-PODFILE CHECKSUM: 3ed0d7b97abfac39f9809177801d66761fb5c0d1
+PODFILE CHECKSUM: fedaa5fd0eaa8b942d439bc92c7ed5efe830b215
 
 COCOAPODS: 1.8.4
